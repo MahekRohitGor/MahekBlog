@@ -19,7 +19,7 @@ dist-ssr
 .idea
 *.sln
 .DS_Store
-.env
+backend/.env
 *.suo
 *.ntvs*
 *.sw?

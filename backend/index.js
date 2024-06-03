@@ -5,7 +5,7 @@ const userRoutes = require("./routes/user_routes.js");
 
 dotenv.config();
 
-mongoose.connect("mongodb+srv://1mahekgor1:zxb5lM3GOkEt8s1Y@cluster0.3urrgff.mongodb.net/blogdata1").then(
+mongoose.connect(process.env.MONGO).then(
     () => {console.log("MongoDB Connected")}
 ).catch(err =>{
     console.log(err);
