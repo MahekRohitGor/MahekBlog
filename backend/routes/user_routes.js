@@ -1,9 +1,7 @@
 const express = require("express");
-
+const {test} = require("../controllers/user_controller")
 const router = express.Router();
 
-router.get("/test", (req,res)=>{
-    res.json({message: "API Working"});
-});
+router.get("/test", test);
 
 module.exports = router;
