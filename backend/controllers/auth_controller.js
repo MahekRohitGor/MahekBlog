@@ -18,6 +18,15 @@ const signup = async (req,res, next)=>{
         res.json("Signup successful");
     }
     catch(error){
+        if (error.code === 11000) {
+            // Duplicate key error
+            if (error.keyPattern && error.keyPattern.username) {
+                return next(errorHandler(400, 'Username already exists'));
+            }
+            if (error.keyPattern && error.keyPattern.email) {
+                return next(errorHandler(400, 'Email already exists'));
+            }
+        }
         next(error);
     }
 }

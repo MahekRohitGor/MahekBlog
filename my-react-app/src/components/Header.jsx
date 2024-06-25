@@ -9,9 +9,9 @@ function Header() {
     return (
         <Navbar className='border-b-2 py-1 px-2'>
             <Link to="/" className="self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white">
-                <span className="px-1 py-0.5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded text-white">
-                    Mahek's
-                </span> Blog
+                <span className="px-1 py-0.5 bg-slate-800 rounded text-white">
+                Mahek
+                </span> Gor
             </Link>
             <form>
                 <TextInput 
@@ -28,7 +28,7 @@ function Header() {
                 <Button className='w-10 h-10 hidden sm:flex items-center justify-center' color='gray' pill>
                     <FaMoon />
                 </Button>
-                <Link to="/sign-in">
+                <Link to="/sign-up">
                     <Button gradientDuoTone='purpleToBlue' outline>
                         Sign In
                     </Button>
